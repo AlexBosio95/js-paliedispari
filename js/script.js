@@ -37,7 +37,18 @@ function reverseWord(parola) {
 // Dichiariamo chi ha vinto.
 
 const userSelect = prompt('scegli tra pari o dispari');
+
+let i = 0;
+
+// controllo per inserimento pari o dispari
+while(userSelect != 'pari' && userSelect != 'dispari'){
+    const userSelect = prompt('scegli tra pari o dispari');
+
+    i++
+}
+
 const userNumberSelect = parseInt(prompt('scegli un numero'));
+
 const min = 1;
 const max = 5;
 const numerorandom = randomNumber(min, max);
@@ -55,7 +66,7 @@ if (userSelect == 'pari' && isEven == true){
 } else if (userSelect == 'dispari' && isEven == false) {
     console.log('Utente hai vinto il numero è dispari');
 } else {
-    console.log('Ha vinto il PC')
+    console.warn('Ha vinto il PC')
 }
 
 
