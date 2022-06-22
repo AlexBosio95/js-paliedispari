@@ -15,8 +15,10 @@ if (userWord == wordReverse) {
 function reverseWord(parola) {
     let wordReverse = '';
 
+    // parti dall'ultima lettera
     let i = parola.length - 1;
 
+    // scrivi la parola al contrario 
     while (i >= 0) {
         wordReverse += parola[i];
 
