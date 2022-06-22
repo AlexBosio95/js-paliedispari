@@ -36,13 +36,13 @@ function reverseWord(parola) {
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-const userSelect = prompt('scegli tra pari o dispari');
+let userSelect = prompt('scegli tra pari o dispari');
 
 let i = 0;
 
 // controllo per inserimento pari o dispari
 while(userSelect != 'pari' && userSelect != 'dispari'){
-    const userSelect = prompt('scegli tra pari o dispari');
+    userSelect = prompt('scegli tra pari o dispari');
 
     i++
 }
