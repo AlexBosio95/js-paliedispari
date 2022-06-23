@@ -2,14 +2,18 @@
 // Chiedere all’utente di inserire una parola.
 // Creare una funzione per capire se la parola inserita è palindroma.
 
-const userWord = prompt('dammi un parola')
+const userWord = prompt('dammi un parola');
 const wordReverse = reverseWord(userWord)
+
+
 
 if (userWord == wordReverse) {
     console.log('la parola è palindroma');
 } else {
     console.log('la parola non è palindroma');
 }
+
+
 
 // Funzione per invertire una parola
 function reverseWord(parola) {
@@ -25,7 +29,10 @@ function reverseWord(parola) {
         i--;
     }
 
+    console.log(wordReverse);
+
     return wordReverse;
+
 }
 
 
@@ -36,7 +43,7 @@ function reverseWord(parola) {
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-let userSelect = prompt('scegli tra pari o dispari');
+let userSelect = prompt('scegli tra pari o dispari').toLowerCase();
 
 let i = 0;
 
@@ -47,7 +54,11 @@ while(userSelect != 'pari' && userSelect != 'dispari'){
     i++
 }
 
-const userNumberSelect = parseInt(prompt('scegli un numero'));
+let userNumberSelect = parseInt(prompt('scegli un numero tra 1 e 5'));
+
+while(isNaN(userNumberSelect) || userNumberSelect < 1 || userNumberSelect > 5){
+    userNumberSelect = parseInt(prompt('scegli un numero tra 1 e 5'));
+} 
 
 const min = 1;
 const max = 5;
